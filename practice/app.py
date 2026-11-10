@@ -39,9 +39,10 @@ classifier = pipeline(
 
 
 st.subheader("")
-st.subheader("Testing the model (accuracy .7)")
+st.subheader("Testing the model (accuracy .5)")
+st.info("This model is a trained movie review sentiment analysis run on TinyBERT model")
 user_input = st.text_area(
-    label='Enter your test review',
+    label='Enter your sample test movie review',
     placeholder='Type here',
 )
 predict = st.button('Predict')

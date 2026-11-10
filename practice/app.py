@@ -24,6 +24,7 @@ def download_folder(local_dir: str, s3_prefix: str):
 st.title("ML Model Streamlit Host to Download model from S3")
 
 button = st.button("Download your model")
+st.info("Model should run after getting downloaded")
 if button:
     with st.spinner("Download, please wait!"):
         download_folder(local_dir, s3_prefix)
@@ -38,7 +39,7 @@ classifier = pipeline(
 
 
 st.subheader("")
-st.subheader("Testing your model")
+st.subheader("Testing the model (accuracy .7)")
 user_input = st.text_area(
     label='Enter your test review',
     placeholder='Type here',
